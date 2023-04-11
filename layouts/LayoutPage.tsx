@@ -6,12 +6,14 @@ import React, { PropsWithChildren, useState } from 'react'
 
 export const LayoutPage = ({ children }: PropsWithChildren) => {
   const router = useRouter()
+
   const PAGES_ROUTES = {
     Home: '/',
     Destination: '/destination',
     Crew: '/crew',
     Technology: 'technology',
   }
+
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
 
   const toggleMobileMenu = () => {

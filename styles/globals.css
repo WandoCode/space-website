@@ -15,8 +15,12 @@ body {
 
 .h1 {
   font-family: var(--fontB);
-  font-size: 150px;
+  font-size: 80px;
   text-transform: uppercase;
+
+  @media screen(sm) {
+    font-size: 150px;
+  }
 }
 
 .h2 {
@@ -39,9 +43,18 @@ body {
 
 .h5 {
   font-family: var(--fontA);
-  font-size: 28px;
+  font-size: 16px;
   letter-spacing: 4.75px;
   text-transform: uppercase;
+  color: theme('colors.light-blue');
+
+  @media screen(sm) {
+    font-size: 20px;
+  }
+
+  @media screen(md) {
+    font-size: 28px;
+  }
 }
 
 .subtitle-1 {
@@ -62,12 +75,29 @@ body {
   font-size: 16px;
   letter-spacing: 2.7px;
   text-transform: uppercase;
+
+  @media screen(sm) {
+    font-size: 14px;
+  }
+  @media screen(md) {
+    font-size: 16px;
+  }
 }
 
 p {
   font-family: var(--fontA);
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 15px;
+  line-height: 25px;
+  color: theme('colors.light-blue');
+
+  @media screen(sm) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  @media screen(md) {
+    font-size: 18px;
+    line-height: 32px;
+  }
 }
 
 .back-filter {
