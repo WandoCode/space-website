@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="h-[100dvh] md:bg-hero-bg-desktop bg-no-repeat bg-center bg-cover sm:bg-hero-bg-tablet bg-hero-bg-mobile ">
       <div className="main-container">
-        <header className="flex justify-between items-center pt-10 pl-[55px]">
+        <header className="flex justify-between items-center pt-10 pl-[55px] max-sm:px-6 max-md:pl-8 max-md:pt-0">
           <div>
             <Image src="./shared/logo.svg" alt="logo" width={48} height={48} />
           </div>
