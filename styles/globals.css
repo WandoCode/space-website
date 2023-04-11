@@ -69,3 +69,8 @@ p {
   font-size: 18px;
   line-height: 32px;
 }
+
+.back-filter {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+}

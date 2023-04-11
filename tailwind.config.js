@@ -17,6 +17,11 @@ module.exports = {
       sans: ['Barlow Condensed', 'sans-serif'],
       serif: ['Bellefair', 'serif'],
     },
+    extend: {
+      backgroundImage: {
+        'hero-bg-desktop': "url('/home/background-home-desktop.jpg')",
+      },
+    },
   },
   plugins: [],
 }
