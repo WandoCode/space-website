@@ -12,7 +12,7 @@ export default function Home() {
   }
 
   return (
-    <div className="h-[100dvh] bg-hero-bg-desktop bg-no-repeat bg-center bg-cover ">
+    <div className="h-[100dvh] md:bg-hero-bg-desktop bg-no-repeat bg-center bg-cover sm:bg-hero-bg-tablet bg-hero-bg-mobile ">
       <div className="main-container">
         <header className="flex justify-between items-center pt-10 pl-[55px]">
           <div>

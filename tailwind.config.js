@@ -19,6 +19,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
+        'hero-bg-mobile': "url('/home/background-home-mobile.jpg')",
+        'hero-bg-tablet': "url('/home/background-home-tablet.jpg')",
         'hero-bg-desktop': "url('/home/background-home-desktop.jpg')",
       },
     },
