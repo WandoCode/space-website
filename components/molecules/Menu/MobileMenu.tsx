@@ -2,12 +2,21 @@ import { NavItem } from '@/components/atoms/NavItem/NavItem'
 import Image from 'next/image'
 
 interface Props {
-  PAGES: string[]
+  PAGES_ROUTES: Record<string, string>
+
   isOpen: boolean
   onCloseMenu: () => void
+  currPath: string
 }
 
-export const MobileMenu = ({ PAGES, isOpen, onCloseMenu }: Props) => {
+export const MobileMenu = ({
+  PAGES_ROUTES,
+  isOpen,
+  onCloseMenu,
+  currPath,
+}: Props) => {
+  const PAGES = Object.keys(PAGES_ROUTES)
+
   return (
     <>
       {isOpen && (
@@ -25,7 +34,12 @@ export const MobileMenu = ({ PAGES, isOpen, onCloseMenu }: Props) => {
           </button>
           <ul className="flex flex-col gap-8">
             {PAGES.map((page, i) => (
-              <NavItem key={page + i} index={i} text={page} />
+              <NavItem
+                key={page + i}
+                index={i}
+                text={page}
+                isActive={currPath === PAGES_ROUTES[page]}
+              />
             ))}
           </ul>
         </div>

@@ -1,10 +1,17 @@
 import { DesktopMenu } from '@/components/molecules/Menu/DesktopMenu'
 import { MobileMenu } from '@/components/molecules/Menu/MobileMenu'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { useState } from 'react'
 
 export default function Home() {
-  const PAGES = ['Home', 'Destination', 'Crew', 'Technology']
+  const router = useRouter()
+  const PAGES_ROUTES = {
+    Home: '/',
+    Destination: '/destination',
+    Crew: '/crew',
+    Technology: 'technology',
+  }
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
 
   const toggleMobileMenu = () => {
@@ -27,9 +34,10 @@ export default function Home() {
               className="sm:hidden"
             />
           </button>
-          <DesktopMenu PAGES={PAGES} />
+          <DesktopMenu PAGES_ROUTES={PAGES_ROUTES} currPath={router.pathname} />
           <MobileMenu
-            PAGES={PAGES}
+            currPath={router.pathname}
+            PAGES_ROUTES={PAGES_ROUTES}
             isOpen={mobileMenuIsOpen}
             onCloseMenu={toggleMobileMenu}
           />
