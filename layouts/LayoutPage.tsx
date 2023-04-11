@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import React, { PropsWithChildren, useState } from 'react'
 
-export const Page = ({ children }: PropsWithChildren) => {
+export const LayoutPage = ({ children }: PropsWithChildren) => {
   const router = useRouter()
   const PAGES_ROUTES = {
     Home: '/',
