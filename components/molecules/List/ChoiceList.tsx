@@ -16,7 +16,7 @@ export const ChoiceList = ({
   }
 
   return (
-    <ul className="flex gap-[26px] h-[28px]">
+    <ul className="flex gap-[26px] ">
       {choicesList.map((choice: string, i: number) => (
         <ListItem
           key={choice + i}

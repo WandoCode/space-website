@@ -13,18 +13,20 @@ const Destination = () => {
   return (
     <div className="min-h-[100dvh] flex flex-col md:bg-destination-bg-desktop bg-no-repeat bg-center bg-cover sm:bg-destination-bg-tablet bg-destination-bg-mobile">
       <LayoutPage>
-        <section className="flex flex-col">
-          <h1 className="h5">
-            <span className="text-white/25">01</span> Pick yout destination
-          </h1>
-          <Image
-            src={currAstre.image}
-            alt={`${currAstre.name}`}
-            width={170}
-            height={170}
-          />
-
-          <div>
+        <section className="">
+          <div className="flex flex-col items-center gap-8 mb-6">
+            <p className="h5">
+              <span className="font-bold text-white/25 pr-2">01 </span> Pick
+              yout destination
+            </p>
+            <Image
+              src={currAstre.image}
+              alt={`${currAstre.name}`}
+              width={170}
+              height={170}
+            />
+          </div>
+          <div className="flex flex-col items-center">
             <ChoiceList
               choicesList={astres}
               currChoice={currentDestiationIndex}

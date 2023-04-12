@@ -20,7 +20,7 @@ export const SmallMenu = ({
   return (
     <>
       {isOpen && (
-        <div className="fixed top-0 right-0 w-[67%] h-[100dvh] flex flex-col gap-[65px] pl-[32px] back-filter sm:hidden">
+        <div className="fixed z-50 top-0 right-0 w-[67%] h-[100dvh] flex flex-col gap-[65px] pl-[32px] back-filter sm:hidden">
           <button
             onClick={onCloseMenu}
             className="pt-[33px] pr-[26px] self-end"
