@@ -27,6 +27,16 @@ module.exports = {
         'hero-bg-mobile': "url('/home/background-home-mobile.jpg')",
         'hero-bg-tablet': "url('/home/background-home-tablet.jpg')",
         'hero-bg-desktop': "url('/home/background-home-desktop.jpg')",
+        'destination-bg-mobile':
+          "url('/destination/background-destination-mobile.jpg')",
+        'destination-bg-tablet':
+          "url('/destination/background-destination-tablet.jpg')",
+        'destination-bg-desktop':
+          "url('/destination/background-destination-desktop.jpg')",
+        'img-moon': "url('/destination/image-moon.jpg')",
+        'img-mars': "url('/destination/image-mars.jpg')",
+        'img-titan': "url('/destination/image-titan.jpg')",
+        'img-europa': "url('/destination/image-europa.jpg')",
       },
     },
   },
