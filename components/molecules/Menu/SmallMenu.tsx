@@ -9,7 +9,7 @@ interface Props {
   currPath: string
 }
 
-export const MobileMenu = ({
+export const SmallMenu = ({
   PAGES_ROUTES,
   isOpen,
   onCloseMenu,

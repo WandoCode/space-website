@@ -1,5 +1,5 @@
-import { DesktopMenu } from '@/components/molecules/Menu/DesktopMenu'
-import { MobileMenu } from '@/components/molecules/Menu/MobileMenu'
+import { LargeMenu } from '@/components/molecules/Menu/LargeMenu'
+import { SmallMenu } from '@/components/molecules/Menu/SmallMenu'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import React, { PropsWithChildren, useState } from 'react'
@@ -35,8 +35,8 @@ export const LayoutPage = ({ children }: PropsWithChildren) => {
             className="sm:hidden"
           />
         </button>
-        <DesktopMenu PAGES_ROUTES={PAGES_ROUTES} currPath={router.pathname} />
-        <MobileMenu
+        <LargeMenu PAGES_ROUTES={PAGES_ROUTES} currPath={router.pathname} />
+        <SmallMenu
           currPath={router.pathname}
           PAGES_ROUTES={PAGES_ROUTES}
           isOpen={mobileMenuIsOpen}

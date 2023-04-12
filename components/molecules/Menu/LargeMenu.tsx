@@ -5,7 +5,7 @@ interface Props {
   currPath: string
 }
 
-export const DesktopMenu = ({ PAGES_ROUTES, currPath }: Props) => {
+export const LargeMenu = ({ PAGES_ROUTES, currPath }: Props) => {
   const PAGES = Object.keys(PAGES_ROUTES)
 
   return (
