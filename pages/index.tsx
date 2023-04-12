@@ -16,7 +16,7 @@ export default function Home() {
             </p>
           </div>
           <div className="slipt-two">
-            <button className="bg-white text-dark-blue h4 tracking-[2px] h-[150px] w-[150px] rounded-full flex items-center justify-center pt-2 sm:h-[242px] sm:w-[242px]">
+            <button className="bg-white text-dark-blue h4 tracking-[2px] h-[150px] w-[150px] rounded-full flex items-center justify-center pt-2 sm:h-[242px] sm:w-[242px] md:h-[274px] md:w-[274px] md:hover:outline md:hover:outline-[88px] md:hover:outline-white/10">
               Explore
             </button>
           </div>
