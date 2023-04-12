@@ -4,17 +4,22 @@
 
 :root {
   --fontA: 'Barlow Condensed', sans-serif;
-  --fontB: 'Bellefair', serif;
+  --fontB: 'Barlow Regular', sans-serif;
+  --fontC: 'Bellefair', serif;
 }
 
 body {
   font-family: 'Barlow Condensed', sans-serif;
   background-color: #0b0d17;
   color: white;
+  text-align: center;
+  @media screen(md) {
+    text-align: left;
+  }
 }
 
 .h1 {
-  font-family: var(--fontB);
+  font-family: var(--fontC);
   font-size: 80px;
   text-transform: uppercase;
 
@@ -24,21 +29,25 @@ body {
 }
 
 .h2 {
-  font-family: var(--fontB);
+  font-family: var(--fontC);
   font-size: 100px;
   text-transform: uppercase;
 }
 
 .h3 {
-  font-family: var(--fontB);
+  font-family: var(--fontC);
   font-size: 56px;
   text-transform: uppercase;
 }
 
 .h4 {
-  font-family: var(--fontB);
-  font-size: 32px;
+  font-family: var(--fontC);
+  font-size: 20px;
   text-transform: uppercase;
+
+  @media screen(sm) {
+    font-size: 32px;
+  }
 }
 
 .h5 {
@@ -58,7 +67,7 @@ body {
 }
 
 .subtitle-1 {
-  font-family: var(--fontB);
+  font-family: var(--fontC);
   font-size: 28px;
   text-transform: uppercase;
 }
@@ -84,8 +93,8 @@ body {
   }
 }
 
-p {
-  font-family: var(--fontA);
+.p {
+  font-family: var(--fontB);
   font-size: 15px;
   line-height: 25px;
   color: theme('colors.light-blue');
@@ -94,6 +103,7 @@ p {
     font-size: 16px;
     line-height: 28px;
   }
+
   @media screen(md) {
     font-size: 18px;
     line-height: 32px;

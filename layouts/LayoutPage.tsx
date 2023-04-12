@@ -21,7 +21,7 @@ export const LayoutPage = ({ children }: PropsWithChildren) => {
   }
 
   return (
-    <div className="main-container">
+    <>
       <header className="flex justify-between items-center pt-6 px-6 sm:pt-0 sm:pr-0 sm:pl-10  md:pl-[55px] md:pt-10">
         <div>
           <Image src="/shared/logo.svg" alt="logo" width={48} height={48} />
@@ -43,7 +43,9 @@ export const LayoutPage = ({ children }: PropsWithChildren) => {
           onCloseMenu={toggleMobileMenu}
         />
       </header>
-      <main>{children}</main>
-    </div>
+      <main className="flex-grow flex justify-center items-center sm:mt-10">
+        {children}
+      </main>
+    </>
   )
 }

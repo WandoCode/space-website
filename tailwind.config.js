@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     screens: {
       sm: '600px',
-      md: '900px',
+      md: '1040px',
     },
     colors: {
       'dark-blue': '#0B0D17',
