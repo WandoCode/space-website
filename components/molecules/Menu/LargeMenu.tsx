@@ -15,6 +15,7 @@ export const LargeMenu = ({ PAGES_ROUTES, currPath }: Props) => {
           key={page + i}
           index={i}
           text={page}
+          path={PAGES_ROUTES[page]}
           isActive={currPath === PAGES_ROUTES[page]}
         />
       ))}
