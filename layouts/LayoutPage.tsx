@@ -23,7 +23,7 @@ export const LayoutPage = ({ children }: PropsWithChildren) => {
   return (
     <>
       <header className="flex justify-between items-center pt-6 px-6 sm:pt-0 sm:pr-0 sm:pl-10  md:pl-[55px] md:pt-10">
-        <div>
+        <div className="before:hidden relative flex-grow z-10 before:md:block before:md:h-[1px] before:md:content-[''] before:md:absolute before:md:bg-white before:md:right-[-30px] before:md:bottom-[50%] before:md:left-[112px] before:md:opacity-25 ">
           <Image src="/shared/logo.svg" alt="logo" width={48} height={48} />
         </div>
         <button onClick={toggleMobileMenu}>
