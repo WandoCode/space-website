@@ -7,6 +7,10 @@ module.exports = {
     './layouts/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    screens: {
+      sm: '600px',
+      md: '900px',
+    },
     colors: {
       'dark-blue': '#0B0D17',
       'light-blue': '#D0D6F9',
