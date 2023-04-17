@@ -3,6 +3,7 @@ import datas from '@/datas.json'
 import { useState } from 'react'
 import Image from 'next/legacy/image'
 import { ChoiceList } from '@/components/molecules/List/ChoiceList'
+import { ListItem } from '@/components/atoms/ListItem/ListItem'
 
 const Destination = () => {
   const [currentDestiationIndex, setCurrentDestiationIndex] =
@@ -35,6 +36,7 @@ const Destination = () => {
               choicesList={astres}
               currChoice={currentDestiationIndex}
               changeCurrChoice={(i) => setCurrentDestiationIndex(i)}
+              itemComponent={ListItem}
             />
             <h2 className="h2 pt-4 sm:pt-8 md:pt-9 md:pb-2">
               {currAstre.name}
