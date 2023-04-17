@@ -16,6 +16,7 @@ module.exports = {
       'light-blue': '#D0D6F9',
       'gray-400': '#979797',
       'gray-600': '#151620',
+      'gray-700': '#383B4B',
       white: '#FFF',
     },
     fontFamily: {

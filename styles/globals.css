@@ -30,8 +30,15 @@ body {
 
 .h2 {
   font-family: var(--fontC);
-  font-size: 100px;
+  font-size: 56px;
   text-transform: uppercase;
+
+  @media screen(sm) {
+    font-size: 80px;
+  }
+  @media screen(md) {
+    font-size: 100px;
+  }
 }
 
 .h3 {
@@ -79,16 +86,12 @@ body {
   font-size: 14px;
   letter-spacing: 2.35px;
   text-transform: uppercase;
-
-  @media screen(sm) {
-    font-size: 16px;
-    letter-spacing: 2.7px;
-  }
+  color: theme('colors.light-blue');
 }
 
 .nav-text {
   font-family: var(--fontA);
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 2.7px;
   text-transform: uppercase;
 

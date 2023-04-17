@@ -13,8 +13,8 @@ const Destination = () => {
   return (
     <div className="min-h-[100dvh] flex flex-col md:bg-destination-bg-desktop bg-no-repeat bg-center bg-cover sm:bg-destination-bg-tablet bg-destination-bg-mobile">
       <LayoutPage>
-        <section className="">
-          <div className="flex flex-col items-center gap-8 mb-6">
+        <section className="px-6 pb-[58px] pt-7">
+          <div className="flex flex-col items-center gap-8 mb-6 ">
             <p className="h5">
               <span className="font-bold text-white/25 pr-2">01 </span> Pick
               yout destination
@@ -32,17 +32,19 @@ const Destination = () => {
               currChoice={currentDestiationIndex}
               changeCurrChoice={(i) => setCurrentDestiationIndex(i)}
             />
-            <h2>{currAstre.name}</h2>
-            <p>{currAstre.description}</p>
-          </div>
-          <div>
-            <div>
-              <h3>Avg. Distance</h3>
-              <p>{currAstre.distance}</p>
-            </div>
-            <div>
-              <h3>Est. Travel Time</h3>
-              <p>{currAstre.travel}</p>
+            <h2 className="h2 pt-4">{currAstre.name}</h2>
+            <p className="p pb-8 mb-8 border-b-[1px] border-b-gray-700 border-b-solid">
+              {currAstre.description}
+            </p>
+            <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-2">
+                <h3 className="subtitle-2">Avg. Distance</h3>
+                <p className="subtitle-1">{currAstre.distance}</p>
+              </div>
+              <div className="flex flex-col gap-2">
+                <h3 className="subtitle-2">Est. Travel Time</h3>
+                <p className="subtitle-1">{currAstre.travel}</p>
+              </div>
             </div>
           </div>
         </section>
