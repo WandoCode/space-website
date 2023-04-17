@@ -4,7 +4,10 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import React, { PropsWithChildren, useState } from 'react'
 
-export const LayoutPage = ({ children }: PropsWithChildren) => {
+interface Props extends PropsWithChildren {
+  mainClassName?: string
+}
+export const LayoutPage = ({ mainClassName, children }: Props) => {
   const router = useRouter()
 
   const PAGES_ROUTES = {
@@ -43,7 +46,7 @@ export const LayoutPage = ({ children }: PropsWithChildren) => {
           onCloseMenu={toggleMobileMenu}
         />
       </header>
-      <main>{children}</main>
+      <main className={mainClassName}>{children}</main>
     </>
   )
 }
