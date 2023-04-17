@@ -37,6 +37,7 @@ const Destination = () => {
               currChoice={currentDestiationIndex}
               changeCurrChoice={(i) => setCurrentDestiationIndex(i)}
               itemComponent={ListItem}
+              type="named"
             />
             <h2 className="h2 pt-4 sm:pt-8 md:pt-9 md:pb-2">
               {currAstre.name}

@@ -4,6 +4,7 @@ import { FunctionComponent } from 'react'
 interface Props {
   choicesList: string[]
   currChoice: number
+  type: 'named' | 'anonym'
   changeCurrChoice: (i: number) => void
   itemComponent: any
   // TODO: Comment résoudre le type de 'itemComponent' si je veux qu'il soit valide pour plusieurs composants différents? (problème avec les props du composant...)
@@ -14,6 +15,7 @@ export function ChoiceList({
   changeCurrChoice,
   currChoice,
   itemComponent,
+  type,
 }: Props) {
   const ItemComponent = itemComponent
   const handleClick = (i: number) => {
@@ -25,7 +27,7 @@ export function ChoiceList({
       {choicesList.map((choice: string, i: number) => (
         <ItemComponent
           key={choice + i}
-          text={choice}
+          text={type === 'named' ? choice : ''}
           isActive={currChoice === i}
           cbClick={() => handleClick(i)}
         />
