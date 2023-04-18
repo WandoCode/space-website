@@ -7,7 +7,7 @@ export default function Home() {
         <div className="flex-grow flex flex-col justify-center items-center sm:mt-10">
           <section className=" flex flex-col items-center gap-[81px]  pb-12 sm:pb-[90px] sm:gap-[156px] md:w-[80%] md:max-w-[1110px] md:mx-auto md:flex-row  md:justify-between md:gap-0 md:items-end">
             <div className="slip-one grid gap-4 justify-items-center mx-auto sm:gap-0 sm:w-min md:mx-0 md:justify-items-start">
-              <p className="h5">So, you want to travel to</p>
+              <p className="h5 text-light-blue">So, you want to travel to</p>
               <h1 className="h1">Space</h1>
               <p className="p px-6 sm:px-0">
                 Let’s face it; if you want to go to space, you might as well

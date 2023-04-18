@@ -1,37 +1,54 @@
-import { ListItem } from '@/components/atoms/ListItem/ListItem'
-import { FunctionComponent } from 'react'
+import { ListItem, ListItemProps } from '@/components/atoms/ListItem/ListItem'
+import { FunctionComponent, ReactNode, useEffect } from 'react'
 
 interface Props {
-  choicesList: string[]
+  choicesList?: string[]
   currChoice: number
-  type: 'named' | 'anonym'
+  type: ListItemProps['type']
+  nbrItems?: number
   changeCurrChoice: (i: number) => void
-  itemComponent: any
-  // TODO: Comment résoudre le type de 'itemComponent' si je veux qu'il soit valide pour plusieurs composants différents? (problème avec les props du composant...)
 }
 
 export function ChoiceList({
   choicesList,
   changeCurrChoice,
   currChoice,
-  itemComponent,
   type,
+  nbrItems,
 }: Props) {
-  const ItemComponent = itemComponent
   const handleClick = (i: number) => {
     changeCurrChoice(i)
   }
 
-  return (
-    <ul className="flex gap-[26px] ">
-      {choicesList.map((choice: string, i: number) => (
-        <ItemComponent
+  const buildItemsArray = () => {
+    let items: ReactNode[] = []
+
+    if (choicesList) {
+      items = choicesList.map((choice: string, i: number) => (
+        <ListItem
           key={choice + i}
-          text={type === 'named' ? choice : ''}
+          text={choice}
           isActive={currChoice === i}
           cbClick={() => handleClick(i)}
+          type={type}
         />
-      ))}
-    </ul>
-  )
+      ))
+    } else if (nbrItems) {
+      for (let i = 0; i < nbrItems; i++) {
+        items.push(
+          <ListItem
+            key={i}
+            text={`${i}`}
+            isActive={currChoice === i}
+            cbClick={() => handleClick(i)}
+            type={type}
+          />
+        )
+      }
+    }
+
+    return items
+  }
+
+  return <ul className="flex gap-[26px] ">{buildItemsArray()}</ul>
 }

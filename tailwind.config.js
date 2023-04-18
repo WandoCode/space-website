@@ -34,6 +34,9 @@ module.exports = {
           "url('/destination/background-destination-tablet.jpg')",
         'destination-bg-desktop':
           "url('/destination/background-destination-desktop.jpg')",
+        'crew-bg-mobile': "url('/crew/background-crew-mobile.jpg')",
+        'crew-bg-tablet': "url('/crew/background-crew-tablet.jpg')",
+        'crew-bg-desktop': "url('/crew/background-crew-desktop.jpg')",
         'img-moon': "url('/destination/image-moon.jpg')",
         'img-mars': "url('/destination/image-mars.jpg')",
         'img-titan': "url('/destination/image-titan.jpg')",

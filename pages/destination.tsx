@@ -3,12 +3,11 @@ import datas from '@/datas.json'
 import { useState } from 'react'
 import Image from 'next/legacy/image'
 import { ChoiceList } from '@/components/molecules/List/ChoiceList'
-import { ListItem } from '@/components/atoms/ListItem/ListItem'
 
 const Destination = () => {
-  const [currentDestiationIndex, setCurrentDestiationIndex] =
+  const [currentDestiantionIndex, setCurrentDestiantionIndex] =
     useState<number>(0)
-  const currAstre = datas.destinations[currentDestiationIndex]
+  const currAstre = datas.destinations[currentDestiantionIndex]
   const astres = datas.destinations.map((astre) => astre.name)
 
   return (
@@ -34,9 +33,8 @@ const Destination = () => {
           <div className="flex flex-col items-center md:flex-1 md:flex-grow md:items-start md:min-w-[445px]">
             <ChoiceList
               choicesList={astres}
-              currChoice={currentDestiationIndex}
-              changeCurrChoice={(i) => setCurrentDestiationIndex(i)}
-              itemComponent={ListItem}
+              currChoice={currentDestiantionIndex}
+              changeCurrChoice={(i) => setCurrentDestiantionIndex(i)}
               type="named"
             />
             <h2 className="h2 pt-4 sm:pt-8 md:pt-9 md:pb-2">
