@@ -7,6 +7,7 @@ interface Props {
   type: ListItemProps['type']
   nbrItems?: number
   changeCurrChoice: (i: number) => void
+  className?: string
 }
 
 export function ChoiceList({
@@ -15,6 +16,7 @@ export function ChoiceList({
   currChoice,
   type,
   nbrItems,
+  className,
 }: Props) {
   const handleClick = (i: number) => {
     changeCurrChoice(i)
@@ -50,5 +52,5 @@ export function ChoiceList({
     return items
   }
 
-  return <ul className="flex gap-[26px] ">{buildItemsArray()}</ul>
+  return <ul className={className}>{buildItemsArray()}</ul>
 }
