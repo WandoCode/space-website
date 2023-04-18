@@ -36,7 +36,7 @@ const Destination = () => {
               currChoice={currentDestiantionIndex}
               changeCurrChoice={(i) => setCurrentDestiantionIndex(i)}
               type="named"
-              className="flex gap-[26px] "
+              className="flex gap-[26px]"
             />
             <h2 className="h2 pt-4 sm:pt-8 md:pt-9 md:pb-2">
               {currAstre.name}

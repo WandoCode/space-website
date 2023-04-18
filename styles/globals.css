@@ -36,6 +36,7 @@ body {
   @media screen(sm) {
     font-size: 80px;
   }
+
   @media screen(md) {
     font-size: 100px;
   }
@@ -43,8 +44,16 @@ body {
 
 .h3 {
   font-family: var(--fontC);
-  font-size: 56px;
+  font-size: 24px;
   text-transform: uppercase;
+
+  @media screen(sm) {
+    font-size: 40px;
+  }
+
+  @media screen(md) {
+    font-size: 56px;
+  }
 }
 
 .h4 {
@@ -86,6 +95,20 @@ body {
   letter-spacing: 2.35px;
   text-transform: uppercase;
   color: theme('colors.light-blue');
+}
+
+.subtitle-3 {
+  font-family: var(--fontC);
+  font-size: 16px;
+  text-transform: uppercase;
+
+  @media screen(sm) {
+    font-size: 24px;
+  }
+
+  @media screen(md) {
+    font-size: 32px;
+  }
 }
 
 .nav-text {
