@@ -8,7 +8,7 @@ export interface ListItemProps {
 }
 
 export const ListItem = ({ text, isActive, cbClick, type }: ListItemProps) => {
-  const buildNamedClassName = () => {
+  const buildNamedLIClassName = () => {
     const basicStyle =
       "relative w-fit hover:after:content-[''] hover:after:h-[3px] hover:after:bg-white hover:after:w-[100%] hover:after:absolute hover:after:bottom-0 hover:after:left-0 cursor-pointer"
 
@@ -18,15 +18,15 @@ export const ListItem = ({ text, isActive, cbClick, type }: ListItemProps) => {
     return isActive ? `${basicStyle} ${activeStyle}` : basicStyle
   }
 
-  const buildAnonymClassName = () => {
-    const basicStyle = 'w-[10px] h-[10px] bg-white/10 rounded-full'
+  const buildAnonymLIClassName = () => {
+    const basicStyle = 'flex  bg-white/10 rounded-full'
 
     const activeStyle = 'bg-white/100'
 
     return isActive ? `${basicStyle} ${activeStyle}` : basicStyle
   }
 
-  const buildNumberClassName = () => {
+  const buildNumberLIClassName = () => {
     const basicStyle = ''
 
     const activeStyle = ''
@@ -34,18 +34,21 @@ export const ListItem = ({ text, isActive, cbClick, type }: ListItemProps) => {
     return isActive ? `${basicStyle} ${activeStyle}` : basicStyle
   }
 
-  const style = {
-    named: buildNamedClassName(),
-    anonym: buildAnonymClassName(),
-    number: buildNumberClassName(),
+  const styleLI = {
+    named: buildNamedLIClassName(),
+    anonym: buildAnonymLIClassName(),
+    number: buildNumberLIClassName(),
+  }
+
+  const styleBtn = {
+    named: 'nav-text pb-2 translate-x-[1px]',
+    anonym: 'w-[10px] h-[10px]',
+    number: '',
   }
 
   return (
-    <li className={style[type]}>
-      <button
-        className="nav-text pb-2 translate-x-[1px] "
-        onClick={() => cbClick()}
-      >
+    <li className={styleLI[type]}>
+      <button className={styleBtn[type]} onClick={() => cbClick()}>
         {type === 'anonym' ? (
           <span className="sr-only">{text}</span>
         ) : (
