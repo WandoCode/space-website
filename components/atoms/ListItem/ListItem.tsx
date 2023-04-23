@@ -42,7 +42,7 @@ export const ListItem = ({ text, isActive, cbClick, type }: ListItemProps) => {
 
   const styleBtn = {
     named: 'nav-text pb-2 translate-x-[1px]',
-    anonym: 'w-[10px] h-[10px]',
+    anonym: 'w-[10px] h-[10px] md:w-[15px] md:h-[15px]',
     number: '',
   }
 
